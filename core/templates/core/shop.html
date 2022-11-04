@@ -21,8 +21,13 @@
         </ul>
       </div> 
 </header>
+<section class="mt-5 pt-5">
+    <div class="container px-4 px-lg-5 mt-4 d-flex justify-content-center">
+        <h1 class="row border-bottom border-3  border-dark pb-3">Our Products</h1>
+    </div>
+</section>
 {% comment %} Explore main category section {% endcomment %}
-<section class="py-5">
+<section class="">
     <div class="container px-4 px-lg-5 mt-4">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-md-3 justify-content-center">
             {% for type in types %}
@@ -40,13 +45,23 @@
         </div>
     </div>
 </section>
+<section class="mt-5 pt-5">
+    <div class="container px-4 px-lg-5 mt-4 d-flex justify-content-center border-bottom border-top border-2 py-5 px-5">
+        <img  class="border-0 px-2 mx-2" src="{% static 'images/kors.png' %}" width="100" height="30">
+        <img  class="border-0 px-2 mx-2" src="{% static 'images/Chanel.png' %}" width="80" height="50">
+        <img  class="border-0 px-2 mx-2" src="{% static 'images/GAR.png' %}" width="150" height="30">
+        <img  class="border-0 px-2 mx-2" src="{% static 'images/Dior.png' %}" width="150" height="30">
+        <img  class="border-0 px-2 mx-2" src="{% static 'images/emporio.png' %}" width="100" height="50">
+        <img  class="border-0 px-2 mx-2" src="{% static 'images/gucci.png' %}" width="80" height="50">
+    </div>
+</section>
 <!-- Section-->
 <section class="py-5 bg-light">
     <div class="container px-4 px-lg-5 mt-2">
         <div class="row">
-            <div class="col mb-4">
+            <!-- <div class="col mb-4">
                 <h3>FEATURED</h3>
-            </div>
+            </div> -->
         <div>
         {% comment %} <div class="col mb-5">
             <a href="#"><h5 style="line-decoration: underline;">View more</h5></a>
@@ -76,25 +91,27 @@
         </div>
     </div>
 </section>
-<section class="py-5">
-    <div class="container">
-        <div class="row mb-4">
-            {% for product in products|slice:"0:2" %}
-            <div class="col-lg-6" id="gridImage">
-                <img src={{product.category.image.url}}>
-                <div class="text-center" id="categoryButton" style="color:white;"><h3 class=" mt-auto" href="#">{{product.category.title}}</h3></div>
-                <div class="text-center" id="categoryButton"><a class="btn btn-outline-light mt-auto" href="#">View options</a></div>
+<section class="py-1">
+    <div class="container mt-4">
+        <div class="justify-content-center">
+            <div class="row row2-cols-6 row-cols-lg-3 row-cols-lg-3 mb-4 d-flex justify-content-center">
+                {% for product in products|slice:"0:2" %}
+                <div class="col mt-4" id="gridImage">
+                    <img src={{product.category.image.url}}>
+                    <div class="text-center" id="categoryButton" style="color:white;"><h3 class=" mt-auto" href="#">{{product.category.title}}</h3></div>
+                    <div class="text-center" id="categoryButton"><a class="btn btn-outline-light mt-auto" href="#">View options</a></div>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-        <div class="row mt-4">
-            {% for product in products|slice:"5:7" %}
-            <div class="col-lg-6" id="gridImage">
-                <img src={{product.category.image.url}}>
-                <div class="text-center" id="categoryButton" style="color:white;"><h3 class=" mt-auto" href="#">{{product.category.title}}</h3></div>
-                <div class="text-center" id="categoryButton"><a class="btn btn-outline-light mt-auto" href="#">View options</a></div>
+            <div class="row row2-cols-6 row-cols-lg-3 row-cols-lg-3 mb-4 d-flex justify-content-center">
+                {% for product in products|slice:"5:7" %}
+                <div class="col mt-4" id="gridImage">
+                    <img src={{product.category.image.url}}>
+                    <div class="text-center" id="categoryButton" style="color:white;"><h3 class=" mt-auto" href="#">{{product.category.title}}</h3></div>
+                    <div class="text-center" id="categoryButton"><a class="btn btn-outline-light mt-auto" href="#">View options</a></div>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </section>

@@ -11455,9 +11455,17 @@ animation: transition 6s infinite linear;
 }
 
 #gridImage {
-  width: 44vw;
-  height: 60vh;
+  width: 36em;
+  height: 40em;
   transition: 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 1400px) {
+  #gridImage {
+    width: 24em;
+    height: 24em;
+    transition: 0.5s ease-in-out;
+  }
 }
 
 #gridImage img {
