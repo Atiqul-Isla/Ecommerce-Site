@@ -11563,3 +11563,34 @@ li a:hover{
   text-decoration: none;
   color: darksalmon;
 }
+
+.inf-slide-w {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.inf-slide {
+  margin: auto auto;
+  white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 100%;
+  height: 100%;
+
+}
+
+/* .inf-slide span {
+  white-space: nowrap;
+  animation: inf-slide 10s linear infinite;
+}
+
+@keyframes inf-slide {
+  0%{
+    transform: translate(0,0);
+  }
+  100%{
+    transform: translate(-300%,0);
+  }
+} */
